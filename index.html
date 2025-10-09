@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      Zach's IT Solutions | West Hartford Computer Support
+    </title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+      .hero-gradient {
+        background: linear-gradient(135deg, #4f46e5 0%, #1e40af 100%);
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-4">
+            <i data-feather="cpu" class="text-indigo-600 w-8 h-8"></i>
+            <span class="font-bold text-xl text-indigo-600"
+              >Zach's IT Solutions</span
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-indigo-600 transition"
+              >Services</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-700 hover:text-indigo-600 transition"
+              >Pricing</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-indigo-600 transition"
+              >About</a
+            >
+            <a
+              href="#testimonials"
+              class="text-gray-700 hover:text-indigo-600 transition"
+              >Testimonials</a
+            >
+            <a
+              href="#contact"
+              class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              class="text-gray-700 focus:outline-none"
+            >
+              <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white pb-4 px-4"
+      >
+        <a
+          href="#services"
+          class="block py-2 text-gray-700 hover:text-indigo-600 transition"
+          >Services</a
+        >
+        <a
+          href="#pricing"
+          class="block py-2 text-gray-700 hover:text-indigo-600 transition"
+          >Pricing</a
+        >
+        <a
+          href="#about"
+          class="block py-2 text-gray-700 hover:text-indigo-600 transition"
+          >About</a
+        >
+        <a
+          href="#testimonials"
+          class="block py-2 text-gray-700 hover:text-indigo-600 transition"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition text-center mt-2"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 md:py-32">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Personalized IT Support in West Hartford
+            </h1>
+            <p class="text-xl mb-8 opacity-90">
+              Fast, friendly, and reliable computer solutions right at
+              your doorstep.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition"
+                >Get Help Today</a
+              >
+              <a
+                href="tel:+18608337606"
+                class="border-2 border-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-indigo-600 transition"
+              >
+                <i data-feather="phone" class="inline mr-2"></i> (860)
+                833-7606
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2" data-aos="fade-left">
+            <img
+              src="http://static.photos/technology/640x360/1"
+              alt="IT Support"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Transparent Pricing
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Fair rates with no hidden fees
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-white rounded-lg shadow-lg p-8"
+            data-aos="fade-up"
+          >
+            <h3 class="text-2xl font-bold text-indigo-600 mb-6">
+              Service Packages
+            </h3>
+            <div class="space-y-6">
+              <div class="border-b border-gray-200 pb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-gray-800">
+                    Data Backup Services
+                  </h4>
+                  <span class="font-bold text-indigo-600">$59</span>
+                </div>
+                <p class="text-gray-600">
+                  Create a secure backup of your data
+                </p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-gray-800">
+                    Complete System Tune-Up
+                  </h4>
+                  <span class="font-bold text-indigo-600">$129</span>
+                </div>
+                <p class="text-gray-600">
+                  Optimization, cleaning, and updates
+                </p>
+              </div>
+              <div class="border-b border-gray-200 pb-4">
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-gray-800">
+                    Virus & Malware Removal
+                  </h4>
+                  <span class="font-bold text-indigo-600">$149</span>
+                </div>
+                <p class="text-gray-600">
+                  Complete scan and removal with a 30-day guarantee plus training
+                </p>
+              </div>
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <h4 class="font-bold text-gray-800">
+                    Website Development
+                  </h4>
+                  <span class="font-bold text-indigo-600"
+                    >Quote Required</span
+                  >
+                </div>
+                <p class="text-gray-600">
+                  Create personalized websites for personal or
+                  business use.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-lg p-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="text-2xl font-bold text-indigo-600 mb-6">
+              Hourly Services
+            </h3>
+            <div class="mb-8">
+              <div class="flex justify-between items-center mb-2">
+                <h4 class="font-bold text-gray-800">
+                  Standard Hourly Rate
+                </h4>
+                <span class="font-bold text-indigo-600"
+                  >$85/hour</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                For custom projects and ongoing support
+              </p>
+              <div class="bg-indigo-50 p-4 rounded-lg">
+                <h4 class="font-bold text-indigo-700 mb-2">
+                  Service Guarantee
+                </h4>
+                <p class="text-gray-700">
+                  First 30 minutes are free if I can't solve your
+                  issue!
+                </p>
+              </div>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-4">
+                Discount Packages
+              </h4>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-700"
+                    >4-hour prepaid block</span
+                  >
+                  <span class="font-bold text-indigo-600"
+                    >$300 ($75/hour)</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-700"
+                    >8-hour prepaid block</span
+                  >
+                  <span class="font-bold text-indigo-600"
+                    >$560 ($70/hour)</span
+                  >
+                </div>
+                <div class="pt-4 mt-4 border-t border-gray-200">
+                  <p class="text-gray-600 text-sm">
+                    * All prices subject to 6.35% CT sales tax. Travel
+                    fee may apply for locations outside West Hartford.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Expert IT Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive solutions tailored to your needs
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="shield" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Virus & Malware Removal
+            </h3>
+            <p class="text-gray-600">
+              Thorough cleaning of infected systems with complete data
+              protection and prevention strategies.
+            </p>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="hard-drive" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Data Backup & Recovery
+            </h3>
+            <p class="text-gray-600">
+              Secure your valuable data with automated backup
+              solutions and emergency recovery services.
+            </p>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="settings" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              System Optimization
+            </h3>
+            <p class="text-gray-600">
+              Speed up slow computers with comprehensive cleaning,
+              updates, and performance tuning.
+            </p>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="monitor" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Website Development
+            </h3>
+            <p class="text-gray-600">
+              Create a unique online presence with a custom website
+              tailored to your business or personal brand. As a
+              testament to my skills, I built this very website you're
+              visiting right now!
+            </p>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="smartphone" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Device Setup
+            </h3>
+            <p class="text-gray-600">
+              New computer, tablet, or smartphone setup with all your
+              favorite apps and settings.
+            </p>
+          </div>
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-indigo-600 mb-4">
+              <i data-feather="help-circle" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">
+              Tech Support
+            </h3>
+            <p class="text-gray-600">
+              Patient, one-on-one training and troubleshooting for any
+              tech challenge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+            <img
+              src="http://static.photos/people/640x360/2"
+              alt="Zach - IT Consultant"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              About Zach
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Hi, I'm Zach from West Hartford, Connecticut. With over
+              a decade of experience in IT support, I'm passionate
+              about helping my neighbors solve their tech problems
+              with patience and expertise.
+            </p>
+            <p class="text-gray-600 mb-6">
+              I started Zach's IT Solutions to provide personalized,
+              in-home computer support that big box stores can't
+              match. When you contact me, you get direct access to an
+              expert who cares about your technology working right.
+            </p>
+            <div class="flex items-center space-x-4">
+              <div class="bg-indigo-100 p-3 rounded-full">
+                <i
+                  data-feather="award"
+                  class="text-indigo-600 w-6 h-6"
+                ></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">
+                  Certified Professional
+                </h4>
+                <p class="text-gray-600">
+                  Microsoft, Apple, React, HTML, CSS, Typescript
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-indigo-600 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">What My Clients Say</h2>
+          <p class="text-xl opacity-90 max-w-2xl mx-auto">
+            Trusted by homeowners and small businesses throughout West
+            Hartford
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Testimonial 1 -->
+          <div
+            class="testimonial-card rounded-lg p-6 border border-white border-opacity-20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="http://static.photos/people/200x200/3"
+                alt="Sarah J."
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Sarah J.</h4>
+                <div class="flex text-yellow-300">
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <p class="opacity-90">
+              "Zach saved all my family photos when my computer
+              crashed. He was so patient explaining the backup process
+              and now I have peace of mind."
+            </p>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            class="testimonial-card rounded-lg p-6 border border-white border-opacity-20"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="http://static.photos/people/200x200/4"
+                alt="Michael T."
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Michael T.</h4>
+                <div class="flex text-yellow-300">
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <p class="opacity-90">
+              "My home office network was a mess. Zach set up a secure
+              system that works perfectly for my wife and I to work
+              from home simultaneously."
+            </p>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            class="testimonial-card rounded-lg p-6 border border-white border-opacity-20"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="http://static.photos/people/200x200/5"
+                alt="Linda K."
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-bold">Linda K.</h4>
+                <div class="flex text-yellow-300">
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                  <i
+                    data-feather="star"
+                    class="w-4 h-4 fill-current"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <p class="opacity-90">
+              "Finally, someone who speaks plain English about
+              computers! Zach fixed my virus problem and showed me how
+              to avoid it in the future."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Ready to solve your tech problems? Contact me today!
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row">
+          <div
+            class="md:w-1/2 mb-10 md:mb-0 md:pr-8"
+            data-aos="fade-right"
+          >
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold text-gray-800 mb-6">
+                Contact Information
+              </h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                    <i
+                      data-feather="map-pin"
+                      class="text-indigo-600 w-5 h-5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">
+                      Service Area
+                    </h4>
+                    <p class="text-gray-600">
+                      West Hartford, CT and surrounding areas
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                    <i
+                      data-feather="phone"
+                      class="text-indigo-600 w-5 h-5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Call Me</h4>
+                    <p class="text-gray-600">(860) 833-7606</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                    <i
+                      data-feather="mail"
+                      class="text-indigo-600 w-5 h-5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Email</h4>
+                    <p class="text-gray-600">
+                      zach@zachsitsolutions.com
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                    <i
+                      data-feather="clock"
+                      class="text-indigo-600 w-5 h-5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Hours</h4>
+                    <p class="text-gray-600">
+                      Monday - Friday: 9am - 6pm<br />Saturday: 10am -
+                      3pm
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2" data-aos="fade-left">
+            <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+              <div class="mb-6">
+                <label
+                  for="name"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="email"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="phone"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="service"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Service Needed</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                  <option value="">Select a service</option>
+                  <option value="device">
+                    New Device Setup ($39)
+                  </option>
+                  <option value="backup">
+                    Data Backup only ($59)
+                  </option>
+                  <option value="backupsetup">
+                    Data Backup/Transfer with Computer Setup ($99)
+                  </option>
+                  <option value="tuneup">
+                    System Tune-Up ($129)
+                  </option>
+                  <option value="virus">Virus Removal ($149)</option>
+                  <option value="hourly">
+                    Hourly Service ($85/hr)
+                  </option>
+                  <option value="4hour">
+                    4-hour Block ($75/hr)
+                  </option>
+                  <option value="8hour">
+                    8-hour Block ($70/hr)
+                  </option>
+                  <option value="website">
+                    Website Development (Quote Required)
+                  </option>
+                  <option value="other">
+                    Other (Quote Required)
+                  </option>
+                </select>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-indigo-600 text-white py-3 rounded-md font-medium hover:bg-indigo-700 transition"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center space-x-2 mb-4">
+              <i
+                data-feather="cpu"
+                class="text-indigo-400 w-8 h-8"
+              ></i>
+              <span class="font-bold text-xl"
+                >Zach's IT Solutions</span
+              >
+            </div>
+            <p class="text-gray-400 max-w-xs">
+              Personalized in-home IT support serving West Hartford
+              and surrounding communities.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 class="font-bold text-lg mb-4">Services</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#pricing"
+                    class="text-gray-400 hover:text-white transition"
+                    >Virus Removal</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    class="text-gray-400 hover:text-white transition"
+                    >Data Backup</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    class="text-gray-400 hover:text-white transition"
+                    >System Tune-Up</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#pricing"
+                    class="text-gray-400 hover:text-white transition"
+                    >Website Development</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-4">Company</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a
+                    href="#about"
+                    class="text-gray-400 hover:text-white transition"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#testimonials"
+                    class="text-gray-400 hover:text-white transition"
+                    >Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="text-gray-400 hover:text-white transition"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-4">Connect</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition"
+                >
+                  <i data-feather="facebook" class="w-5 h-5"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition"
+                >
+                  <i data-feather="twitter" class="w-5 h-5"></i>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition"
+                >
+                  <i data-feather="linkedin" class="w-5 h-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Zach's IT Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById('menu-btn')
+        .addEventListener('click', function () {
+          document
+            .getElementById('mobile-menu')
+            .classList.toggle('hidden');
+        });
+
+      // Initialize animations
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Initialize feather icons
+      feather.replace();
+    </script>
+  </body>
+</html>
